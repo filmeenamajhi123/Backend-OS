@@ -21,6 +21,9 @@ app.use(express.json());
 const routes = require('./routes/routes');
 app.use('/api', routes);
 
+app.get("/", (req, res) => {
+    res.send("Backend is running 🚀");
+});
 
 app.listen(5000, () => {
     console.log(`Server started at ${5000}`);
